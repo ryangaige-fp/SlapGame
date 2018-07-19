@@ -1,29 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* header with health */
+
+header {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  /* grid-gap: 1rem; */
+  height: 5vh;
+  background: black;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+header:second-child {
+  grid-column-start: 6;
+}
+.health {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+/* progress bar  */
+.progress {
+  grid-column-start: 4;
+  grid-column-end: 16;
+}
+
 /* background */
-@keyframes animatedBackground {
-  from {
-    background-position: 0 0;
+@keyframes animatedFog {
+  0% {
+    background-position: -200% 0;
   }
-  to {
-    background-position: 100% 0;
+  100% {
+    background-position: 300% 0;
   }
+}
+
+.main-container {
+  height: 90vh;
 }
 
 .backgroundImage {
-  background-image: url(/Assets/Photos/forest.jpg);
-  height: 100vh;
-  background-position: center;
+  background: url(/Assets/Photos/forest.jpg) center/cover no-repeat;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
+/* fog speed control */
 .fog {
   height: 36rem;
+  width: 100%;
   background-image: url(/Assets/Photos/fog2.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
 
-  animation: animatedBackground 40s linear infinite;
+  animation: animatedFog 30s linear infinite;
 }
 
-.targetImg {
-  width: 25rem;
-  height: 46rem;
+/* monster image */
+.monster,
+.goodGuy {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  height: 100%;
+}
+.targetImg,
+.slapperImg {
+  height: 36rem;
+  position: absolute;
+  right: 16rem;
+  bottom: 0;
+}
+
+.slapperImg {
+  left: 17rem;
+}
+/* footer with buttons */
+footer {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 1rem;
+  height: 10vh;
+  background: black;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  left: 0;
+  width: 100%;
+  align-items: center;
+}
+
+button {
+  grid-column-end: span 2;
+  height: 3rem;
+  border-radius: 4px;
+}
+
+button:first-child {
+  grid-column-start: 6;
 }

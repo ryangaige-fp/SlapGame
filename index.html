@@ -16,17 +16,32 @@
 
 <body>
 
-    <div class="container-fluid   ">
+    <div class="main-container">
+        <header>
+            <span class="health" id="health">Health:</span>
+            <div class="progress" id="progress" value="100" max="100"></div>
+
+        </header>
         <div class="row backgroundImage">
-            <div class="col-12 fog">
-                <div class="col-12"></div>
-                <div class="col-12">
-                    <img class="targetImg" src="/Assets/Photos/pans labyrinth.png" alt="">
-                </div>
+            <div class="fog "></div>
+
+            <div class="monster">
+                <img class="targetImg" src="/Assets/Photos/pans labyrinth.png" alt="">
+            </div>
+            <div class="goodGuy">
+                <img class="slapperImg" src="/Assets/Photos/Dhalsim.gif" alt="">
             </div>
 
+
         </div>
-        <div class="row"></div>
+
+        <footer class="footer">
+            <button class="slap" onclick="slap()">Slap</button>
+            <button class="punch">Punch</button>
+            <button class="kick">Kick</button>
+
+        </footer>
+
 
     </div>
 
