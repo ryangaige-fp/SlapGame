@@ -1,0 +1,29 @@
+/* background */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.backgroundImage {
+  background-image: url(/Assets/Photos/forest.jpg);
+  height: 100vh;
+  background-position: center;
+}
+
+.fog {
+  height: 36rem;
+  background-image: url(/Assets/Photos/fog2.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  animation: animatedBackground 40s linear infinite;
+}
+
+.targetImg {
+  width: 25rem;
+  height: 46rem;
+}
