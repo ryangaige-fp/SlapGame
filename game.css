@@ -130,6 +130,25 @@ button {
   border-radius: 4px;
 }
 
+button.slap {
+  background-color: rgb(204, 69, 69);
+}
+button.punch {
+  background-color: rgb(204, 69, 69);
+}
+button.kick {
+  background-color: rgb(204, 69, 69);
+}
+button.mushroom {
+  background-color: rgb(0, 235, 59);
+}
+button.soul {
+  background-color: rgb(0, 235, 59);
+}
+button.potion {
+  background-color: rgb(0, 235, 59);
+}
+
 button:first-child {
-  grid-column-start: 6;
+  grid-column-start: 3;
 }
