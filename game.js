@@ -2,11 +2,16 @@ var health = 100;
 var hits = -1;
 
 
-let obj = (name, modifier, description) {
+let Obj = (name, modifier, description) {
 this.name = name;
 this.modifier = modifier;
 this.description = description;
 
+}
+
+let items = {
+  poison:new Item ("Poison", 9, "Slowly kills you from the inside out!")
+  
 }
 
 
