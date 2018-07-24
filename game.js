@@ -1,20 +1,15 @@
 var health = 100;
 var hits = -1;
 
-
-let Obj = (name, modifier, description) {
-this.name = name;
-this.modifier = modifier;
-this.description = description;
-
-}
+let Obj = function(name, modifier, description) {
+  this.name = name;
+  this.modifier = modifier;
+  this.description = description;
+};
 
 let items = {
-  poison:new Item ("Poison", 9, "Slowly kills you from the inside out!")
-  
-}
-
-
+  poison: new Item("Poison", 9, "Slowly kills you from the inside out!")
+};
 
 function slap() {
   health -= 1;
