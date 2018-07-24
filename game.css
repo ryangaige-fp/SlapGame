@@ -70,7 +70,7 @@ header {
 }
 
 .backgroundImage {
-  background: url(/Assets/Photos/forest.jpg) center/cover no-repeat;
+  background: url(Assets/Photos/forest.jpg) center/cover no-repeat;
   flex-wrap: nowrap;
   position: relative;
   z-index: 1;
@@ -81,7 +81,7 @@ header {
 .fog {
   height: 36rem;
   width: 100%;
-  background-image: url(/Assets/Photos/fog2.png);
+  background-image: url(Assets/Photos/fog2.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   position: absolute;

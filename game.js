@@ -1,6 +1,16 @@
 var health = 100;
 var hits = -1;
 
+
+let obj = (name, modifier, description) {
+this.name = name;
+this.modifier = modifier;
+this.description = description;
+
+}
+
+
+
 function slap() {
   health -= 1;
   update();
