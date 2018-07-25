@@ -15,7 +15,7 @@ let Obj = function(name, modifier, description) {
 };
 
 let items = {
-  mushroom: new Item(
+  mushroom: new Items(
     "Magic shroom 'Brah'",
     16,
     "eat these and your health will grow grow grow!"
