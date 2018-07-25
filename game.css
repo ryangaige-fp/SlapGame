@@ -103,7 +103,7 @@ header {
   height: 36rem;
   position: absolute;
   right: 16rem;
-  bottom: 0;
+  bottom: 1rem;
 }
 
 .slapperImg {
@@ -114,7 +114,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-gap: 1rem;
-  height: 10vh;
+  height: 12vh;
   background: black;
   position: fixed;
   bottom: 0;

@@ -1,11 +1,17 @@
 // let health = 100;
-let hits = -1;
+let hits = 0;
 
-let paleGuy = {
+let char1 = {
   name: "Pale Guy",
   health: 100,
   items: []
 };
+
+let Character = function(name, health, items[]){
+  this.name = name;
+  this.health = health;
+  this.item = items[];
+}
 
 let Obj = function(name, modifier, description) {
   this.name = name;
@@ -17,47 +23,69 @@ let Obj = function(name, modifier, description) {
 let items = {
   mushroom: new Items(
     "Magic shroom 'Brah'",
-    16,
+    5,
     "eat these and your health will grow grow grow!"
   ),
-  soul: new Item("Soul Drain", 50, "Sucks out your soul and regerates life!"),
-  lifePotion: new Item(
+  soul: new Items("Soul Drain", 15, "Sucks out your soul and regerates life!"),
+  lifePotion: new Items(
     "Life Potion",
-    26,
+    30,
     "Given to you from the old lady in the cave, restores your health!"
   )
 };
 
 function giveMushroom() {
-  paleGuy.items.push("mushroom");
-  paleGuy.health += 16;
+  char1.items.push("mushroom");
+  char1.health += 5;
   update();
 }
 
 function giveSoul() {
-  paleGuy.items.push("soul");
-  paleGuy.health += 50;
+  char1.items.push("soul");
+  char1.health += 15;
   update();
 }
 
 function giveLifePotion() {
-  paleGuy.items.push("lifePotion");
-  paleGuy.health += 26;
+  char1.items.push("lifePotion");
+  char1.health += 30;
   update();
 }
 
 function slap() {
-  paleGuy.health -= 1;
+  if (
+    document.getElementById("monsterImage").src == "Assets/Photos/Dhalsim.gif"
+  ) {
+    document.getElementById("monsterImage").src = "Assets/Photos/Dhalsim.gif";
+  } else {
+    document.getElementById("monsterImage").src = "Assets/Photos/punching.gif";
+  }
+  char1.health -= 1;
   update();
 }
 
 function punch() {
-  paleGuy.health -= 5;
+  if (
+    document.getElementById("monsterImage").src == "Assets/Photos/Dhalsim.gif"
+  ) {
+    document.getElementById("monsterImage").src = "Assets/Photos/Dhalsim.gif";
+  } else {
+    document.getElementById("monsterImage").src = "Assets/Photos/dhalPunch.gif";
+  }
+  char1.health -= 5;
   update();
 }
 
 function kick() {
-  paleGuy.health -= 10;
+  if (
+    document.getElementById("monsterImage").src == "Assets/Photos/Dhalsim.gif"
+  ) {
+    document.getElementById("monsterImage").src = "Assets/Photos/Dhalsim.gif";
+  } else {
+    document.getElementById("monsterImage").src =
+      "Assets/Photos/Dhalsim-SFA2-Heavy-Air-Kick.gif";
+  }
+  char1.health -= 10;
   update();
 }
 
@@ -69,17 +97,17 @@ update();
 
 function update() {
   increaseHits();
-  document.getElementById("health").innerText = paleGuy.health;
+  document.getElementById("health").innerText = char1.health;
   document.getElementById("hits").innerText = hits;
-  document.getElementById("progress").style.width = paleGuy.health + "%";
-  document.getElementById("EnemyName").innerText = paleGuy.name;
+  document.getElementById("progress").style.width = char1.health + "%";
+  document.getElementById("EnemyName").innerText = char1.name;
 
-  if (paleGuy.health <= 0) {
+  if (char1.health <= 0) {
     document.getElementById("progress").style.width = 0;
     document.getElementById("health").innerText = 0;
   }
 
-  if (paleGuy.health >= 100) {
+  if (char1.health >= 100) {
     document.getElementById("progress").style.width = 100;
     document.getElementById("health").innerText = 100;
   }
@@ -87,9 +115,4 @@ function update() {
   //   alert: "You die";
   // } else {
   // }
-
-  // console.log(health);
-
-  // hits++;
-  // console.log(hits);
 }
